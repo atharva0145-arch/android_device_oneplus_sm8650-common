@@ -258,13 +258,10 @@ endif
 
 # Lineage Health
 PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
 
-$(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/oplus_chg/battery/mmi_charging_enable)
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay-service.oplus
 
 # MatLog
 PRODUCT_PACKAGES += \
@@ -451,10 +448,7 @@ PRODUCT_PACKAGES += \
 # Touch
 ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch-service.oplus
 
-$(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(LOCAL_PATH)/touch/include)
-$(call soong_config_set_bool,OPLUS_LINEAGE_TOUCH_HAL,USE_OPLUSTOUCH,true)
 endif
 
 # Update engine
